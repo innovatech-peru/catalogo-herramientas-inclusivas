@@ -4,179 +4,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo de Herramientas Inclusivas | INNOVATECH</title>
+<title>INNOVATECH | Catálogo de Herramientas Inclusivas</title>
 <style>
-:root{--navy:#172554;--purple:#5141a5;--violet:#8064cf;--bg:#f5f6fc;--ink:#252b42}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
-header{background:var(--navy);color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.brand{font-weight:800;letter-spacing:2px;font-size:20px}
-header a{color:white;text-decoration:none;margin-left:12px;font-size:14px}
-.hero{background:linear-gradient(135deg,#172554,#5141a5,#8064cf);color:white;text-align:center;padding:75px 20px}
-.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.12}
-.hero p{max-width:760px;margin:auto;font-size:18px}
-main{max-width:1120px;margin:auto;padding:42px 20px}
-section{margin-bottom:50px;scroll-margin-top:25px}
-.section-title{font-size:29px;color:#30256c}
-.intro,.tool,.final{background:white;border-radius:16px;padding:25px;box-shadow:0 5px 20px #20205012}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
-.tool{border-top:5px solid var(--violet)}
-.emoji{font-size:34px}
-.tool h3{color:#30256c;font-size:22px}
-.pill{display:inline-block;background:#eeeaff;color:#5141a5;padding:4px 11px;border-radius:20px;font-size:12px;font-weight:bold}
-.tool h4{color:#5141a5;margin:18px 0 5px}
-.video{display:inline-block;margin-top:9px;padding:10px 14px;border-radius:9px;background:#5141a5;color:white;text-decoration:none;font-weight:bold;font-size:14px}
-.video:hover{background:#30256c}
-.note{font-size:13px;color:#626b82}
-table{width:100%;border-collapse:collapse;background:white}
-th,td{text-align:left;padding:13px;border-bottom:1px solid #e5e7f0;font-size:14px}
-th{background:#30256c;color:white}
-.final{background:#211d4d;color:white}
-.final h2{color:white}
-footer{text-align:center;background:var(--navy);color:#d9d7ed;padding:24px}
-@media(max-width:600px){header{padding:16px 20px}.hero{padding:50px 18px}main{padding:30px 15px}}
+:root {
+  --navy:#17143b;
+  --purple:#7045c5;
+  --dark:#50309b;
+  --lavender:#f1edff;
+  --ink:#29263d;
+  --muted:#69677a;
+  --line:#e6e1f2;
+  --bg:#f8f7fc;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+}
+.hero {
+  color:white;
+  text-align:center;
+  padding:60px 20px 50px;
+  background:linear-gradient(135deg,#17143b,#38236e,#7650c8);
+}
+.brand {
+  display:inline-block;
+  border:1px solid #ffffff70;
+  border-radius:30px;
+  padding:7px 18px;
+  letter-spacing:3px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+.hero h1 {
+  max-width:850px;
+  margin:auto;
+  font-size:clamp(2rem,5vw,3.2rem);
+  line-height:1.15;
+}
+.hero p {color:#eee9ff;font-size:1.08rem}
+nav {
+  position:sticky;
+  top:0;
+  z-index:5;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:13px;
+  background:white;
+  border-bottom:1px solid var(--line);
+}
+nav a {
+  color:var(--dark);
+  text-decoration:none;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:20px;
+}
+nav a:hover {background:var(--lavender)}
+main {
+  width:min(1120px,calc(100% - 30px));
+  margin:35px auto 55px;
+}
+.intro,.conclusion {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:25px;
+  margin-bottom:28px;
+  box-shadow:0 8px 25px #2619500d;
+}
+h2 {color:var(--navy)}
+.section-title {margin:40px 0 18px;font-size:1.8rem}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.tool {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px #2619500d;
+}
+.tool-head {
+  background:linear-gradient(120deg,var(--navy),var(--purple));
+  color:white;
+  padding:21px;
+}
+.tool-head h3 {display:inline;font-size:1.2rem}
+.number {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:32px;
+  height:32px;
+  background:white;
+  color:var(--navy);
+  border-radius:50%;
+  margin-right:8px;
+  font-weight:bold;
+}
+.content {padding:22px}
+.content h4 {color:var(--dark);margin:17px 0 5px}
+.content p {margin:6px 0 10px}
+.content ul {padding-left:20px}
+.tag {
+  display:inline-block;
+  padding:4px 10px;
+  margin:0 5px 5px 0;
+  border-radius:20px;
+  background:var(--lavender);
+  color:var(--dark);
+  font-size:.8rem;
+  font-weight:bold;
+}
+.buttons {display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.btn {
+  display:inline-block;
+  padding:10px 15px;
+  border-radius:9px;
+  background:var(--purple);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:.9rem;
+}
+.btn:hover {background:var(--dark)}
+.btn.secondary {background:var(--lavender);color:var(--dark)}
+.table-wrap {
+  overflow-x:auto;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+}
+table {width:100%;border-collapse:collapse;min-width:650px}
+th,td {padding:14px;text-align:left;border-bottom:1px solid var(--line)}
+th {background:var(--navy);color:white}
+.note {
+  background:var(--lavender);
+  border-left:4px solid var(--purple);
+  padding:13px;
+  margin-top:16px;
+}
+footer {
+  text-align:center;
+  color:#eee9ff;
+  background:var(--navy);
+  padding:28px;
+}
+footer strong {letter-spacing:3px}
+@media(max-width:760px) {
+  .grid {grid-template-columns:1fr}
+  .hero {padding:45px 18px}
+  .content {padding:18px}
+}
 </style>
 </head>
+
 <body>
-<header>
-<div class="brand">INNOVATECH</div>
-<nav>
-<a href="#presentacion">Presentación</a>
-<a href="#herramientas">Herramientas</a>
-<a href="#comparacion">Comparación</a>
-<a href="#conclusion">Conclusión</a>
-</nav>
+
+<header class="hero">
+  <div class="brand">INNOVATECH</div>
+  <h1>LA JUSTICIA TAMBIÉN ES INCLUSIVA</h1>
+  <p>Catálogo de herramientas de tecnología asistiva y accesibilidad aplicables al ámbito del Derecho.</p>
 </header>
 
-<div class="hero">
-<p>TECNOLOGÍA · ACCESIBILIDAD · JUSTICIA</p>
-<h1>LA JUSTICIA TAMBIÉN ES INCLUSIVA</h1>
-<p>Catálogo de herramientas de tecnología de asistencia y accesibilidad aplicables al ámbito jurídico.</p>
-</div>
+<nav>
+  <a href="#presentacion">Presentación</a>
+  <a href="#herramientas">Herramientas</a>
+  <a href="#comparacion">Comparación</a>
+  <a href="#conclusion">Conclusión</a>
+</nav>
 
 <main>
-<section id="presentacion">
-<h2 class="section-title">Presentación</h2>
-<div class="intro">
-<p>La inclusión en el ámbito jurídico requiere que todas las personas puedan acceder a la información, comunicarse y participar en los procedimientos en igualdad de condiciones. Las herramientas de accesibilidad permiten reducir barreras para personas con discapacidad visual, auditiva, dificultades de lectura o limitaciones para escribir.</p>
-<p>Este catálogo presenta cinco herramientas digitales y explica cómo pueden apoyar a la ciudadanía y a los profesionales del Derecho. Su uso debe acompañarse de medidas de accesibilidad, protección de datos y atención humana cuando sea necesario.</p>
-</div>
+
+<section class="intro" id="presentacion">
+  <h2>Presentación</h2>
+  <p>La tecnología puede ayudar a reducir las barreras que enfrentan las personas con discapacidad al acceder a la información y participar en los servicios de justicia. Este catálogo presenta cinco herramientas de accesibilidad que pueden apoyar a ciudadanos, estudiantes y profesionales del Derecho en actividades como la lectura de documentos, la comunicación, la elaboración de escritos y la participación en reuniones.</p>
+  <p>Estas herramientas constituyen recursos de apoyo que, utilizados adecuadamente, pueden favorecer una atención más accesible e inclusiva.</p>
 </section>
 
-<section id="herramientas">
-<h2 class="section-title">Cinco herramientas inclusivas</h2>
-<div class="tools">
+<h2 class="section-title" id="herramientas">Cinco herramientas inclusivas</h2>
 
+<section class="grid">
+
+<!-- HERRAMIENTA 1 -->
 <article class="tool">
-<div class="emoji">🔊</div>
-<span class="pill">Discapacidad visual</span>
-<h3>1. NVDA – Lector de pantalla</h3>
-<p><b>Desarrollador:</b> NV Access.</p>
-<p><b>Web oficial:</b> <a href="https://www.nvaccess.org/" target="_blank">nvaccess.org</a>.</p>
-<h4>Aplicación en el ámbito jurídico</h4>
-<p>NVDA lee en voz alta el contenido de la pantalla y permite navegar por páginas web y documentos usando el teclado. Facilita que las personas con discapacidad visual consulten portales institucionales, revisen documentos digitales y accedan a información sobre trámites y expedientes compatibles con lectores de pantalla.</p>
-<h4>Requisitos y costo</h4>
-<ul><li>Computadora con Windows.</li><li>Teclado y salida de audio.</li><li>Software gratuito y de código abierto.</li></ul>
-<h4>Demostración visual</h4>
-<a class="video" href="https://www.youtube.com/results?search_query=NVDA+screen+reader+official+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
-<h4>Evaluación crítica</h4>
-<p><b>Ventaja:</b> permite acceder autónomamente a información digital sin costo de licencia.</p>
-<p><b>Limitación:</b> documentos escaneados y páginas mal diseñadas pueden no ser leídos correctamente.</p>
-</article>
-
-<article class="tool">
-<div class="emoji">🗣️</div>
-<span class="pill">Accesibilidad auditiva</span>
-<h3>2. Google Live Transcribe – Transcripción instantánea</h3>
-<p><b>Desarrollador:</b> Google.</p>
-<p><b>Web informativa:</b> <a href="https://www.android.com/accessibility/live-transcribe/" target="_blank">Android – Live Transcribe</a>.</p>
-<h4>Aplicación en el ámbito jurídico</h4>
-<p>Convierte en texto, en tiempo real, las palabras que capta el micrófono del dispositivo. Puede apoyar a personas sordas o con dificultades auditivas durante orientaciones legales, reuniones y conversaciones de atención al ciudadano.</p>
-<h4>Requisitos y costo</h4>
-<ul><li>Dispositivo Android compatible.</li><li>Micrófono y conexión a internet para algunas funciones.</li><li>Aplicación gratuita; la disponibilidad puede variar según dispositivo y región.</li></ul>
-<h4>Demostración visual</h4>
-<a class="video" href="https://www.youtube.com/results?search_query=Google+Live+Transcribe+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
-<h4>Evaluación crítica</h4>
-<p><b>Ventaja:</b> facilita seguir conversaciones al mostrar el habla como texto.</p>
-<p><b>Limitación:</b> puede cometer errores con ruido, acentos o términos técnicos; no reemplaza una interpretación profesional cuando sea necesaria.</p>
-</article>
-
-<article class="tool">
-<div class="emoji">👁️</div>
-<span class="pill">Asistencia visual</span>
-<h3>3. Be My Eyes – Asistencia visual</h3>
-<p><b>Desarrollador:</b> Be My Eyes.</p>
-<p><b>Web oficial:</b> <a href="https://www.bemyeyes.com/" target="_blank">bemyeyes.com</a>.</p>
-<h4>Aplicación en el ámbito jurídico</h4>
-<p>Conecta a personas ciegas o con baja visión con voluntarios o funciones de asistencia visual mediante la cámara del teléfono. Puede ayudar a identificar documentos impresos, reconocer señalizaciones o ubicar elementos en una oficina. La revisión del contenido legal y la confidencialidad deben quedar a cargo de personal autorizado.</p>
-<h4>Requisitos y costo</h4>
-<ul><li>Teléfono inteligente con cámara e internet.</li><li>Aplicación para dispositivos compatibles.</li><li>Uso básico gratuito; algunas funciones pueden tener condiciones propias.</li></ul>
-<h4>Demostración visual</h4>
-<a class="video" href="https://www.youtube.com/results?search_query=Be+My+Eyes+official+app+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
-<h4>Evaluación crítica</h4>
-<p><b>Ventaja:</b> brinda apoyo visual remoto de forma rápida.</p>
-<p><b>Limitación:</b> requiere conexión, cámara y cuidado con la privacidad; no deben compartirse expedientes confidenciales con terceros no autorizados.</p>
-</article>
-
-<article class="tool">
-<div class="emoji">📖</div>
-<span class="pill">Comprensión lectora</span>
-<h3>4. Microsoft Immersive Reader – Lector inmersivo</h3>
-<p><b>Desarrollador:</b> Microsoft.</p>
-<p><b>Web oficial:</b> <a href="https://www.microsoft.com/education/products/learning-tools" target="_blank">Microsoft Learning Tools</a>.</p>
-<h4>Aplicación en el ámbito jurídico</h4>
-<p>Ofrece funciones para facilitar la lectura, como separar sílabas, destacar categorías gramaticales, ajustar el espacio y escuchar el texto en voz alta en productos compatibles. Puede ayudar a comprender instrucciones de trámites y materiales jurídicos.</p>
-<h4>Requisitos y costo</h4>
-<ul><li>Computadora o dispositivo compatible.</li><li>Acceso a una aplicación o plataforma de Microsoft que incluya la función.</li><li>Puede estar incluido sin costo adicional en determinados servicios; otras funciones dependen de la licencia.</li></ul>
-<h4>Demostración visual</h4>
-<a class="video" href="https://www.youtube.com/results?search_query=Microsoft+Immersive+Reader+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
-<h4>Evaluación crítica</h4>
-<p><b>Ventaja:</b> permite adaptar la presentación del texto y escuchar su contenido.</p>
-<p><b>Limitación:</b> no está disponible en todos los programas o documentos; depende de la compatibilidad y, en algunos casos, de una licencia.</p>
-</article>
-
-<article class="tool">
-<div class="emoji">🎙️</div>
-<span class="pill">Dictado por voz</span>
-<h3>5. Google Docs – Escritura por voz</h3>
-<p><b>Desarrollador:</b> Google.</p>
-<p><b>Web oficial:</b> <a href="https://docs.google.com/" target="_blank">Google Docs</a>.</p>
-<h4>Aplicación en el ámbito jurídico</h4>
-<p>Convierte el habla en texto dentro de un documento. Puede apoyar a abogados, estudiantes o usuarios con movilidad reducida o dificultades para escribir al elaborar borradores, notas y documentos. Es necesario revisar nombres, fechas y términos jurídicos.</p>
-<h4>Requisitos y costo</h4>
-<ul><li>Computadora, micrófono y navegador compatible.</li><li>Cuenta de Google y conexión a internet.</li><li>Función disponible sin costo adicional en Google Docs para cuentas compatibles.</li></ul>
-<h4>Demostración visual</h4>
-<a class="video" href="https://www.youtube.com/results?search_query=Google+Docs+Voice+Typing+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
-<h4>Evaluación crítica</h4>
-<p><b>Ventaja:</b> reduce la necesidad de escribir manualmente y agiliza la elaboración de borradores.</p>
-<p><b>Limitación:</b> puede transcribir incorrectamente palabras, puntuación o vocabulario jurídico; requiere revisar el documento.</p>
-</article>
-
+<div class="tool-head">
+<span class="number">1</span>
+<h3>NVDA – Lector de pantalla</h3>
 </div>
+<div class="content">
+<span class="tag">Discapacidad visual</span>
+<span class="tag">Lectura digital</span>
+
+<h4>¿Qué es y quién lo desarrolla?</h4>
+<p>NVDA (NonVisual Desktop Access) es un lector de pantalla gratuito y de código abierto para Windows. Comunica mediante voz sintética la información que aparece en la pantalla y permite navegar por programas y páginas web utilizando el teclado. Es desarrollado por NV Access.</p>
+
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Una persona con discapacidad visual puede utilizarlo para escuchar documentos digitales, revisar información de páginas institucionales, consultar normas publicadas en línea y redactar o leer documentos jurídicos compatibles.</p>
+
+<h4>Requisitos y costo</h4>
+<ul>
+<li>Computadora con sistema operativo Windows.</li>
+<li>Descargar e instalar NVDA desde su página oficial.</li>
+<li>Parlantes o audífonos.</li>
+<li>El programa es gratuito.</li>
+</ul>
+
+<h4>Ventaja y limitación en el Perú</h4>
+<p><strong>Ventaja:</strong> facilita el acceso independiente a información y documentos digitales sin pagar una licencia del lector de pantalla.</p>
+<p><strong>Limitación:</strong> algunos archivos PDF escaneados y páginas mal diseñadas pueden no ser leídos correctamente. Se requiere capacitación básica.</p>
+
+<div class="buttons">
+<a class="btn" href="https://youtu.be/tvWJwLIP9KU?si=wsGDti1vtGyUaZ4M" target="_blank" rel="noopener">▶ Ver demostración en video</a>
+<a class="btn secondary" href="https://www.nvaccess.org/" target="_blank" rel="noopener">Sitio oficial</a>
+</div>
+</div>
+</article>
+
+<!-- HERRAMIENTA 2 -->
+<article class="tool">
+<div class="tool-head">
+<span class="number">2</span>
+<h3>Google Live Transcribe – Transcripción instantánea</h3>
+</div>
+<div class="content">
+<span class="tag">Discapacidad auditiva</span>
+<span class="tag">Voz a texto</span>
+
+<h4>¿Qué es y quién lo desarrolla?</h4>
+<p>Live Transcribe o Transcripción instantánea es una aplicación de Google que convierte en texto, en tiempo real, las palabras que capta el micrófono del dispositivo. Ayuda a seguir conversaciones a personas sordas o con dificultades auditivas.</p>
+
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Puede servir como apoyo para comprender conversaciones durante una orientación legal, reuniones, clases de Derecho o determinadas diligencias presenciales. En audiencias formales, su uso debe coordinarse previamente y no sustituye los servicios profesionales de interpretación.</p>
+
+<h4>Requisitos y costo</h4>
+<ul>
+<li>Dispositivo Android compatible.</li>
+<li>Instalar la aplicación y permitir el uso del micrófono.</li>
+<li>Conexión y disponibilidad según el dispositivo, idioma y región.</li>
+<li>La aplicación es gratuita.</li>
+</ul>
+
+<h4>Ventaja y limitación en el Perú</h4>
+<p><strong>Ventaja:</strong> muestra en pantalla lo que se está diciendo y facilita la comprensión de conversaciones habladas.</p>
+<p><strong>Limitación:</strong> puede cometer errores con ruido ambiental, varios interlocutores o términos jurídicos. No reemplaza la interpretación profesional en lengua de señas peruana.</p>
+
+<div class="buttons">
+<a class="btn" href="https://youtu.be/vT-41xYP2YE?si=CV1Z-ieqagaxJli8" target="_blank" rel="noopener">▶ Ver demostración en video</a>
+<a class="btn secondary" href="https://www.android.com/accessibility/live-transcribe/" target="_blank" rel="noopener">Información oficial</a>
+</div>
+</div>
+</article>
+
+<!-- HERRAMIENTA 3 -->
+<article class="tool">
+<div class="tool-head">
+<span class="number">3</span>
+<h3>Be My Eyes – Asistencia visual</h3>
+</div>
+<div class="content">
+<span class="tag">Discapacidad visual</span>
+<span class="tag">Asistencia remota</span>
+
+<h4>¿Qué es y quién lo desarrolla?</h4>
+<p>Be My Eyes es una aplicación que conecta a personas ciegas o con baja visión con voluntarios videntes mediante videollamadas para recibir ayuda visual. También incorpora funciones de asistencia mediante inteligencia artificial en los lugares donde están disponibles.</p>
+
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Puede apoyar en tareas cotidianas relacionadas con documentos físicos, como identificar un papel, ubicar información impresa o reconocer elementos del entorno de una oficina. Para verificar documentos legales importantes, se debe confirmar la información con una persona responsable o mediante un formato accesible.</p>
+
+<h4>Requisitos y costo</h4>
+<ul>
+<li>Teléfono inteligente compatible.</li>
+<li>Cámara, micrófono y conexión a internet.</li>
+<li>Permitir el acceso a cámara y micrófono.</li>
+<li>La aplicación básica es gratuita.</li>
+</ul>
+
+<h4>Ventaja y limitación en el Perú</h4>
+<p><strong>Ventaja:</strong> permite obtener apoyo visual a distancia y puede favorecer la autonomía.</p>
+<p><strong>Limitación:</strong> depende de una conexión estable y de la disponibilidad de asistencia. Por privacidad, no se deben mostrar documentos confidenciales a terceros sin autorización.</p>
+
+<div class="buttons">
+<a class="btn" href="https://youtu.be/ECVQEku9IhY?si=gk3YJddAKfPeyRBW" target="_blank" rel="noopener">▶ Ver demostración en video</a>
+<a class="btn secondary" href="https://www.bemyeyes.com/" target="_blank" rel="noopener">Sitio oficial</a>
+</div>
+</div>
+</article>
+
+<!-- HERRAMIENTA 4 -->
+<article class="tool">
+<div class="tool-head">
+<span class="number">4</span>
+<h3>Microsoft Immersive Reader – Lectura inmersiva</h3>
+</div>
+<div class="content">
+<span class="tag">Dificultades de lectura</span>
+<span class="tag">Comprensión de textos</span>
+
+<h4>¿Qué es y quién lo desarrolla?</h4>
+<p>Immersive Reader es una herramienta de Microsoft diseñada para facilitar la lectura y comprensión. En aplicaciones compatibles permite escuchar textos en voz alta, modificar su presentación, separar sílabas y resaltar elementos gramaticales, según la versión y el idioma disponibles.</p>
+
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Puede ayudar a estudiantes, ciudadanos y profesionales a leer materiales jurídicos extensos, revisar instrucciones, comprender textos informativos y seguir documentos digitales con menos distracciones.</p>
+
+<h4>Requisitos y costo</h4>
+<ul>
+<li>Dispositivo con acceso a una aplicación o servicio compatible.</li>
+<li>Conexión a internet en los servicios que la requieran.</li>
+<li>La disponibilidad depende del producto y de la cuenta.</li>
+<li>En varios productos está incluido sin costo adicional; algunos planes pueden requerir licencia.</li>
+</ul>
+
+<h4>Ventaja y limitación en el Perú</h4>
+<p><strong>Ventaja:</strong> ofrece opciones para adaptar la lectura y facilitar el estudio y comprensión de textos jurídicos.</p>
+<p><strong>Limitación:</strong> no está disponible de la misma manera en todos los programas o dispositivos; algunas funciones e idiomas pueden variar.</p>
+
+<div class="buttons">
+<a class="btn" href="https://youtu.be/dnDKxSiVTOA?si=b3EcRjNuNxBRSXBn" target="_blank" rel="noopener">▶ Ver demostración en video</a>
+<a class="btn secondary" href="https://www.microsoft.com/education/products/learning-tools" target="_blank" rel="noopener">Información oficial</a>
+</div>
+</div>
+</article>
+
+<!-- HERRAMIENTA 5 -->
+<article class="tool">
+<div class="tool-head">
+<span class="number">5</span>
+<h3>Google Docs Voice Typing – Escritura por voz</h3>
+</div>
+<div class="content">
+<span class="tag">Dictado por voz</span>
+<span class="tag">Redacción de documentos</span>
+
+<h4>¿Qué es y quién lo desarrolla?</h4>
+<p>La escritura por voz de Google Docs permite dictar palabras para que se conviertan en texto dentro de un documento. Es una función de Google Docs que utiliza el reconocimiento de voz del navegador compatible.</p>
+
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Puede apoyar a abogados, estudiantes o ciudadanos con dificultades para escribir o utilizar el teclado al preparar borradores, tomar notas, redactar ideas y elaborar documentos. El texto debe revisarse antes de utilizarse en un trámite o presentarse oficialmente.</p>
+
+<h4>Requisitos y costo</h4>
+<ul>
+<li>Computadora, micrófono y conexión a internet.</li>
+<li>Cuenta de Google y navegador compatible, como Chrome.</li>
+<li>Abrir Google Docs y activar Herramientas → Escritura por voz.</li>
+<li>La función está disponible sin costo adicional en Google Docs.</li>
+</ul>
+
+<h4>Ventaja y limitación en el Perú</h4>
+<p><strong>Ventaja:</strong> facilita la elaboración de borradores sin escribir manualmente y puede apoyar a personas con movilidad reducida.</p>
+<p><strong>Limitación:</strong> puede transcribir incorrectamente nombres, puntuación y vocabulario jurídico; requiere revisión y puede verse afectada por el ruido.</p>
+
+<div class="buttons">
+<a class="btn" href="https://youtu.be/aD_4vwllG3M?si=_s5z5T9VxaYHZcRC" target="_blank" rel="noopener">▶ Ver demostración en video</a>
+<a class="btn secondary" href="https://support.google.com/docs/answer/4492226?hl=es" target="_blank" rel="noopener">Ayuda oficial</a>
+</div>
+</div>
+</article>
+
 </section>
 
-<section id="comparacion">
-<h2 class="section-title">Comparación general</h2>
-<div style="overflow-x:auto">
+<h2 class="section-title" id="comparacion">Cuadro comparativo</h2>
+<div class="table-wrap">
 <table>
-<tr><th>Herramienta</th><th>Necesidad que apoya</th><th>Aplicación jurídica</th><th>Costo</th></tr>
-<tr><td>NVDA</td><td>Discapacidad visual</td><td>Lectura de portales y documentos accesibles</td><td>Gratuito</td></tr>
-<tr><td>Google Live Transcribe</td><td>Discapacidad auditiva</td><td>Transcripción de conversaciones</td><td>Gratuito</td></tr>
-<tr><td>Be My Eyes</td><td>Discapacidad visual</td><td>Apoyo para identificar documentos y señalización</td><td>Uso básico gratuito</td></tr>
-<tr><td>Immersive Reader</td><td>Dificultades de lectura</td><td>Comprensión de instrucciones y textos jurídicos</td><td>Depende del producto</td></tr>
-<tr><td>Google Docs Voice Typing</td><td>Dificultad para escribir</td><td>Dictado de borradores y notas</td><td>Sin costo adicional en Docs compatible</td></tr>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Necesidad que apoya</th>
+<th>Uso jurídico posible</th>
+<th>Costo básico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NVDA</strong></td>
+<td>Acceso a pantalla para personas ciegas o con baja visión.</td>
+<td>Escuchar documentos y navegar por páginas institucionales.</td>
+<td>Gratuito.</td>
+</tr>
+<tr>
+<td><strong>Live Transcribe</strong></td>
+<td>Acceso a conversaciones habladas.</td>
+<td>Apoyo en reuniones y orientaciones.</td>
+<td>Gratuito.</td>
+</tr>
+<tr>
+<td><strong>Be My Eyes</strong></td>
+<td>Asistencia visual remota.</td>
+<td>Identificar documentos y elementos físicos cotidianos.</td>
+<td>Aplicación básica gratuita.</td>
+</tr>
+<tr>
+<td><strong>Immersive Reader</strong></td>
+<td>Lectura y comprensión de textos.</td>
+<td>Leer materiales, instrucciones y textos jurídicos.</td>
+<td>Depende del producto compatible.</td>
+</tr>
+<tr>
+<td><strong>Google Docs Voice Typing</strong></td>
+<td>Dictado de voz a texto.</td>
+<td>Preparar borradores y tomar notas.</td>
+<td>Sin costo adicional en Google Docs.</td>
+</tr>
+</tbody>
 </table>
 </div>
-<p class="note">Los requisitos, idiomas y funciones pueden variar según el dispositivo, la región y la versión del servicio. Antes de usar estas herramientas con información legal, se debe proteger la confidencialidad y verificar la exactitud de los resultados.</p>
+
+<div class="note">
+<strong>Importante:</strong> los costos indicados corresponden al uso básico de las herramientas y no incluyen necesariamente el precio del dispositivo, internet, accesorios o planes de otros servicios. La disponibilidad puede variar según el equipo, la región y la versión.
+</div>
+
+<section class="conclusion" id="conclusion" style="margin-top:30px">
+<h2>Conclusión</h2>
+<p>Las herramientas de accesibilidad pueden contribuir a que más personas participen en condiciones de mayor igualdad en actividades relacionadas con el Derecho. Los lectores de pantalla, la transcripción de voz, la asistencia visual, la lectura inmersiva y el dictado permiten afrontar distintas barreras de comunicación y acceso a la información.</p>
+<p>Sin embargo, la tecnología por sí sola no garantiza una justicia inclusiva. En el Perú también es necesario que las instituciones mejoren la accesibilidad de sus plataformas y documentos, capaciten a su personal y ofrezcan ajustes razonables de acuerdo con las necesidades de cada persona. La inclusión requiere combinar herramientas tecnológicas con respeto, atención adecuada y compromiso institucional.</p>
+<p><strong>INNOVATECH:</strong> tecnología y accesibilidad para una justicia más inclusiva.</p>
 </section>
 
-<section id="conclusion">
-<div class="final">
-<h2>Conclusión</h2>
-<p>Las herramientas de accesibilidad pueden contribuir a que la justicia sea más cercana e inclusiva, porque facilitan la lectura, la comunicación, la orientación y la elaboración de documentos. Sin embargo, la tecnología por sí sola no elimina todas las barreras: las instituciones deben ofrecer información accesible, capacitar a su personal y proteger los datos personales. Incorporar estas soluciones de manera responsable ayuda a promover una participación más autónoma y equitativa de todas las personas en el ámbito jurídico.</p>
-</div>
-</section>
 </main>
-<footer>INNOVATECH · Catálogo de Herramientas Inclusivas en el Derecho</footer>
+
+<footer>
+<strong>INNOVATECH</strong>
+<p>Catálogo de Herramientas Inclusivas en el Derecho</p>
+</footer>
+
 </body>
 </html>
