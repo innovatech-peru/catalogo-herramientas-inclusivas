@@ -4,259 +4,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Justicia También es Inclusiva</title>
+<title>Catálogo de Herramientas Inclusivas | INNOVATECH</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f4f5fa;color:#252b42;line-height:1.7}
-header{background:#172554;color:white;padding:22px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-header h2{font-size:19px}
-nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
-.hero{background:linear-gradient(135deg,#172554,#5141a5,#8064cf);color:white;text-align:center;padding:90px 20px}
-.hero .tag{letter-spacing:3px;font-size:12px;color:#d9d2ff}
-.hero h1{font-size:clamp(35px,6vw,58px);line-height:1.15;margin:20px auto;max-width:850px}
-.hero p{font-size:19px;max-width:700px;margin:auto}
-.hero .sub{font-size:13px;margin-top:30px;letter-spacing:2px}
-main{max-width:1100px;margin:auto;padding:45px 20px}
-section{margin-bottom:55px;scroll-margin-top:25px}
-h2.section-title{font-size:29px;color:#30256c;margin-bottom:18px}
-.intro{background:white;padding:30px;border-radius:15px;border-left:5px solid #7961cb;box-shadow:0 5px 20px #20205012}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
-.tool{background:white;border-radius:15px;padding:25px;box-shadow:0 5px 20px #20205012;border-top:5px solid #7862c9}
-.tool .icon{font-size:38px}
-.tool h3{color:#30256c;font-size:21px;margin:10px 0}
-.tool .price{display:inline-block;background:#eeeaff;color:#5541a0;padding:4px 12px;border-radius:20px;font-size:12px;margin-bottom:12px}
-.tool h4{color:#5141a5;margin-top:17px;margin-bottom:5px}
-.tool ul{padding-left:20px}
-.tool p,.tool li{font-size:14px}
-.visual{background:#ecebfa;border-radius:12px;padding:20px;margin-top:15px;text-align:center;color:#403779}
-.visual strong{font-size:18px;display:block}
-.visual span{font-size:35px}
-.compare{overflow-x:auto;background:white;border-radius:12px;padding:15px}
-table{width:100%;border-collapse:collapse;min-width:550px}
-th,td{text-align:left;padding:14px;border-bottom:1px solid #e5e5ef;font-size:14px}
+:root{--navy:#172554;--purple:#5141a5;--violet:#8064cf;--bg:#f5f6fc;--ink:#252b42}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+header{background:var(--navy);color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:2px;font-size:20px}
+header a{color:white;text-decoration:none;margin-left:12px;font-size:14px}
+.hero{background:linear-gradient(135deg,#172554,#5141a5,#8064cf);color:white;text-align:center;padding:75px 20px}
+.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.12}
+.hero p{max-width:760px;margin:auto;font-size:18px}
+main{max-width:1120px;margin:auto;padding:42px 20px}
+section{margin-bottom:50px;scroll-margin-top:25px}
+.section-title{font-size:29px;color:#30256c}
+.intro,.tool,.final{background:white;border-radius:16px;padding:25px;box-shadow:0 5px 20px #20205012}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.tool{border-top:5px solid var(--violet)}
+.emoji{font-size:34px}
+.tool h3{color:#30256c;font-size:22px}
+.pill{display:inline-block;background:#eeeaff;color:#5141a5;padding:4px 11px;border-radius:20px;font-size:12px;font-weight:bold}
+.tool h4{color:#5141a5;margin:18px 0 5px}
+.video{display:inline-block;margin-top:9px;padding:10px 14px;border-radius:9px;background:#5141a5;color:white;text-decoration:none;font-weight:bold;font-size:14px}
+.video:hover{background:#30256c}
+.note{font-size:13px;color:#626b82}
+table{width:100%;border-collapse:collapse;background:white}
+th,td{text-align:left;padding:13px;border-bottom:1px solid #e5e7f0;font-size:14px}
 th{background:#30256c;color:white}
-.final{background:#211d4d;color:white;padding:30px;border-radius:15px}
-footer{text-align:center;background:#172554;color:white;padding:25px;font-size:13px}
-@media(max-width:600px){header{gap:12px}.hero{padding:65px 15px}nav a{margin:5px}}
+.final{background:#211d4d;color:white}
+.final h2{color:white}
+footer{text-align:center;background:var(--navy);color:#d9d7ed;padding:24px}
+@media(max-width:600px){header{padding:16px 20px}.hero{padding:50px 18px}main{padding:30px 15px}}
 </style>
 </head>
 <body>
-
 <header>
-<h2>⚖ INNOVATECH</h2>
+<div class="brand">INNOVATECH</div>
 <nav>
-<a href="#inicio">Inicio</a>
 <a href="#presentacion">Presentación</a>
 <a href="#herramientas">Herramientas</a>
 <a href="#comparacion">Comparación</a>
+<a href="#conclusion">Conclusión</a>
 </nav>
 </header>
 
-<div class="hero" id="inicio">
-<p class="tag">INNOVACIÓN • ACCESIBILIDAD • DERECHO • INCLUSIÓN</p>
+<div class="hero">
+<p>TECNOLOGÍA · ACCESIBILIDAD · JUSTICIA</p>
 <h1>LA JUSTICIA TAMBIÉN ES INCLUSIVA</h1>
-<p>Tecnología que elimina barreras y garantiza igualdad de oportunidades.</p>
-<p class="sub">CATÁLOGO DE CINCO HERRAMIENTAS DE TECNOLOGÍA DE ASISTENCIA Y ACCESIBILIDAD EN EL ÁMBITO JURÍDICO</p>
+<p>Catálogo de herramientas de tecnología de asistencia y accesibilidad aplicables al ámbito jurídico.</p>
 </div>
 
 <main>
 <section id="presentacion">
-<h2 class="section-title">01. Presentación</h2>
+<h2 class="section-title">Presentación</h2>
 <div class="intro">
-<p>La tecnología constituye una herramienta fundamental para construir una sociedad más inclusiva, especialmente para las personas con discapacidad que enfrentan barreras al acceder a información, comunicarse o participar en diferentes actividades.</p>
-<br>
-<p>En el ámbito jurídico, estas dificultades pueden presentarse al consultar documentos legales, recibir orientación, participar en audiencias digitales o realizar trámites ante instituciones públicas.</p>
-<br>
-<p>Por ello, el presente catálogo reúne cinco herramientas tecnológicas de asistencia y accesibilidad que contribuyen a reducir estas barreras. Se analizarán sus características, aplicaciones prácticas en el Derecho, requisitos técnicos, costos, demostraciones visuales y posibles limitaciones en el contexto peruano.</p>
-<br>
-<p>El propósito es demostrar cómo la tecnología puede favorecer la autonomía de las personas con discapacidad y contribuir a un sistema de justicia más accesible e igualitario.</p>
+<p>La inclusión en el ámbito jurídico requiere que todas las personas puedan acceder a la información, comunicarse y participar en los procedimientos en igualdad de condiciones. Las herramientas de accesibilidad permiten reducir barreras para personas con discapacidad visual, auditiva, dificultades de lectura o limitaciones para escribir.</p>
+<p>Este catálogo presenta cinco herramientas digitales y explica cómo pueden apoyar a la ciudadanía y a los profesionales del Derecho. Su uso debe acompañarse de medidas de accesibilidad, protección de datos y atención humana cuando sea necesario.</p>
 </div>
 </section>
 
 <section id="herramientas">
-<h2 class="section-title">02. Catálogo de herramientas</h2>
+<h2 class="section-title">Cinco herramientas inclusivas</h2>
 <div class="tools">
 
 <article class="tool">
-<div class="icon">🔊</div>
+<div class="emoji">🔊</div>
+<span class="pill">Discapacidad visual</span>
 <h3>1. NVDA – Lector de pantalla</h3>
-<span class="price">Gratuita</span>
-<p><b>Desarrollador:</b> NV Access</p>
-<h4>Datos generales</h4>
-<p>NVDA es un lector de pantalla que permite a las personas con discapacidad visual utilizar computadoras mediante voz sintética y dispositivos Braille compatibles.</p>
-<h4>Aplicación práctica en el Derecho</h4>
-<ul>
-<li>Facilita la consulta de leyes y resoluciones judiciales digitales.</li>
-<li>Permite navegar por plataformas jurídicas.</li>
-<li>Favorece la autonomía para buscar información legal.</li>
-</ul>
-<h4>Requerimientos y costo</h4>
-<ul>
-<li>Computadora o laptop con Windows compatible.</li>
-<li>Audífonos o parlantes; línea Braille opcional.</li>
-<li>Internet para descargar el programa y navegar.</li>
-<li>Costo: gratuito y de código abierto.</li>
-</ul>
+<p><b>Desarrollador:</b> NV Access.</p>
+<p><b>Web oficial:</b> <a href="https://www.nvaccess.org/" target="_blank">nvaccess.org</a>.</p>
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>NVDA lee en voz alta el contenido de la pantalla y permite navegar por páginas web y documentos usando el teclado. Facilita que las personas con discapacidad visual consulten portales institucionales, revisen documentos digitales y accedan a información sobre trámites y expedientes compatibles con lectores de pantalla.</p>
+<h4>Requisitos y costo</h4>
+<ul><li>Computadora con Windows.</li><li>Teclado y salida de audio.</li><li>Software gratuito y de código abierto.</li></ul>
 <h4>Demostración visual</h4>
-<div class="visual"><span>🖥️ 🔈</span><strong>Lectura de pantalla</strong>La computadora interpreta el contenido mediante voz sintética.</div>
-<h4>Valoración crítica</h4>
-<p><b>Ventaja:</b> es gratuito y facilita el acceso autónomo a información digital.</p>
-<p><b>Limitación:</b> algunos PDF escaneados y páginas mal diseñadas no permiten una lectura adecuada.</p>
-<p><b>Contexto peruano:</b> puede contribuir al acceso a información de instituciones judiciales si sus documentos y plataformas son accesibles.</p>
+<a class="video" href="https://www.youtube.com/results?search_query=NVDA+screen+reader+official+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
+<h4>Evaluación crítica</h4>
+<p><b>Ventaja:</b> permite acceder autónomamente a información digital sin costo de licencia.</p>
+<p><b>Limitación:</b> documentos escaneados y páginas mal diseñadas pueden no ser leídos correctamente.</p>
 </article>
 
 <article class="tool">
-<div class="icon">💬</div>
-<h3>2. Google Live Transcribe</h3>
-<span class="price">Gratuita</span>
-<p><b>Desarrollador:</b> Google</p>
-<h4>Datos generales</h4>
-<p>Es una aplicación que convierte las conversaciones habladas en texto en tiempo real, facilitando la comunicación de personas con discapacidad auditiva.</p>
-<h4>Aplicación práctica en el Derecho</h4>
-<ul>
-<li>Permite visualizar conversaciones durante orientaciones jurídicas.</li>
-<li>Facilita el seguimiento de reuniones entre ciudadanos, abogados y funcionarios.</li>
-<li>Puede apoyar en audiencias, sin sustituir una transcripción oficial ni la interpretación profesional.</li>
-</ul>
-<h4>Requerimientos y costo</h4>
-<ul>
-<li>Celular o tableta Android compatible.</li>
-<li>Micrófono integrado o externo.</li>
-<li>Internet según la función e idioma.</li>
-<li>Costo: gratuito.</li>
-</ul>
+<div class="emoji">🗣️</div>
+<span class="pill">Accesibilidad auditiva</span>
+<h3>2. Google Live Transcribe – Transcripción instantánea</h3>
+<p><b>Desarrollador:</b> Google.</p>
+<p><b>Web informativa:</b> <a href="https://www.android.com/accessibility/live-transcribe/" target="_blank">Android – Live Transcribe</a>.</p>
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Convierte en texto, en tiempo real, las palabras que capta el micrófono del dispositivo. Puede apoyar a personas sordas o con dificultades auditivas durante orientaciones legales, reuniones y conversaciones de atención al ciudadano.</p>
+<h4>Requisitos y costo</h4>
+<ul><li>Dispositivo Android compatible.</li><li>Micrófono y conexión a internet para algunas funciones.</li><li>Aplicación gratuita; la disponibilidad puede variar según dispositivo y región.</li></ul>
 <h4>Demostración visual</h4>
-<div class="visual"><span>📱 💬</span><strong>Transcripción instantánea</strong>Las palabras habladas aparecen automáticamente en la pantalla.</div>
-<h4>Valoración crítica</h4>
-<p><b>Ventaja:</b> facilita la comprensión de conversaciones.</p>
-<p><b>Limitación:</b> puede cometer errores en lugares ruidosos o cuando varias personas hablan.</p>
-<p><b>Contexto peruano:</b> puede complementar la atención pública, junto con intérpretes de Lengua de Señas Peruana cuando sean necesarios.</p>
+<a class="video" href="https://www.youtube.com/results?search_query=Google+Live+Transcribe+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
+<h4>Evaluación crítica</h4>
+<p><b>Ventaja:</b> facilita seguir conversaciones al mostrar el habla como texto.</p>
+<p><b>Limitación:</b> puede cometer errores con ruido, acentos o términos técnicos; no reemplaza una interpretación profesional cuando sea necesaria.</p>
 </article>
 
 <article class="tool">
-<div class="icon">👁️</div>
+<div class="emoji">👁️</div>
+<span class="pill">Asistencia visual</span>
 <h3>3. Be My Eyes – Asistencia visual</h3>
-<span class="price">Gratuita para usuarios</span>
-<p><b>Desarrollador:</b> Be My Eyes</p>
-<h4>Datos generales</h4>
-<p>Es una aplicación que conecta a personas ciegas o con baja visión con voluntarios mediante videollamadas y ofrece asistencia visual mediante inteligencia artificial.</p>
-<h4>Aplicación práctica en el Derecho</h4>
-<ul>
-<li>Ayuda a identificar formularios y documentos físicos.</li>
-<li>Facilita la orientación visual durante trámites legales.</li>
-<li>Favorece la autonomía ante instituciones públicas.</li>
-</ul>
-<h4>Requerimientos y costo</h4>
-<ul>
-<li>Celular Android o iPhone compatible.</li>
-<li>Cámara y micrófono.</li>
-<li>Internet para videollamadas y asistencia en línea.</li>
-<li>Costo: gratuito para quienes reciben asistencia visual.</li>
-</ul>
+<p><b>Desarrollador:</b> Be My Eyes.</p>
+<p><b>Web oficial:</b> <a href="https://www.bemyeyes.com/" target="_blank">bemyeyes.com</a>.</p>
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Conecta a personas ciegas o con baja visión con voluntarios o funciones de asistencia visual mediante la cámara del teléfono. Puede ayudar a identificar documentos impresos, reconocer señalizaciones o ubicar elementos en una oficina. La revisión del contenido legal y la confidencialidad deben quedar a cargo de personal autorizado.</p>
+<h4>Requisitos y costo</h4>
+<ul><li>Teléfono inteligente con cámara e internet.</li><li>Aplicación para dispositivos compatibles.</li><li>Uso básico gratuito; algunas funciones pueden tener condiciones propias.</li></ul>
 <h4>Demostración visual</h4>
-<div class="visual"><span>📷 🤝</span><strong>Asistencia visual</strong>Una persona recibe ayuda para reconocer elementos de su entorno.</div>
-<h4>Valoración crítica</h4>
-<p><b>Ventaja:</b> permite recibir orientación visual a distancia.</p>
-<p><b>Limitación:</b> necesita internet y sus descripciones pueden contener errores.</p>
-<p><b>Contexto peruano:</b> puede apoyar trámites administrativos y jurídicos. Se debe evitar compartir información confidencial o expedientes reservados.</p>
+<a class="video" href="https://www.youtube.com/results?search_query=Be+My+Eyes+official+app+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
+<h4>Evaluación crítica</h4>
+<p><b>Ventaja:</b> brinda apoyo visual remoto de forma rápida.</p>
+<p><b>Limitación:</b> requiere conexión, cámara y cuidado con la privacidad; no deben compartirse expedientes confidenciales con terceros no autorizados.</p>
 </article>
 
 <article class="tool">
-<div class="icon">📖</div>
-<h3>4. Microsoft Immersive Reader</h3>
-<span class="price">Según producto y licencia</span>
-<p><b>Desarrollador:</b> Microsoft</p>
-<h4>Datos generales</h4>
-<p>Es una herramienta de accesibilidad que facilita la lectura y comprensión de textos mediante lectura en voz alta, separación de sílabas, modificación del espaciado y enfoque de líneas.</p>
-<h4>Aplicación práctica en el Derecho</h4>
-<ul>
-<li>Facilita la lectura de leyes, contratos y resoluciones.</li>
-<li>Permite escuchar documentos y seguir el texto visualmente.</li>
-<li>Ayuda a comprender información legal extensa.</li>
-</ul>
-<h4>Requerimientos y costo</h4>
-<ul>
-<li>Computadora, laptop o tableta compatible.</li>
-<li>Programa compatible, como Word.</li>
-<li>Audífonos o parlantes.</li>
-<li>Internet según la modalidad.</li>
-<li>Costo: depende del producto y licencia.</li>
-</ul>
+<div class="emoji">📖</div>
+<span class="pill">Comprensión lectora</span>
+<h3>4. Microsoft Immersive Reader – Lector inmersivo</h3>
+<p><b>Desarrollador:</b> Microsoft.</p>
+<p><b>Web oficial:</b> <a href="https://www.microsoft.com/education/products/learning-tools" target="_blank">Microsoft Learning Tools</a>.</p>
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Ofrece funciones para facilitar la lectura, como separar sílabas, destacar categorías gramaticales, ajustar el espacio y escuchar el texto en voz alta en productos compatibles. Puede ayudar a comprender instrucciones de trámites y materiales jurídicos.</p>
+<h4>Requisitos y costo</h4>
+<ul><li>Computadora o dispositivo compatible.</li><li>Acceso a una aplicación o plataforma de Microsoft que incluya la función.</li><li>Puede estar incluido sin costo adicional en determinados servicios; otras funciones dependen de la licencia.</li></ul>
 <h4>Demostración visual</h4>
-<div class="visual"><span>📚 🔎</span><strong>Lectura accesible</strong>El texto puede adaptarse para facilitar su comprensión.</div>
-<h4>Valoración crítica</h4>
-<p><b>Ventaja:</b> facilita la comprensión de documentos extensos.</p>
-<p><b>Limitación:</b> algunas funciones dependen del producto, idioma y licencia.</p>
-<p><b>Contexto peruano:</b> puede facilitar el estudio de normas y documentos jurídicos.</p>
+<a class="video" href="https://www.youtube.com/results?search_query=Microsoft+Immersive+Reader+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
+<h4>Evaluación crítica</h4>
+<p><b>Ventaja:</b> permite adaptar la presentación del texto y escuchar su contenido.</p>
+<p><b>Limitación:</b> no está disponible en todos los programas o documentos; depende de la compatibilidad y, en algunos casos, de una licencia.</p>
 </article>
 
 <article class="tool">
-<div class="icon">🎙️</div>
-<h3>5. Google Docs Voice Typing</h3>
-<span class="price">Gratuita en uso básico</span>
-<p><b>Desarrollador:</b> Google</p>
-<h4>Datos generales</h4>
-<p>Google Docs incorpora una función de escritura por voz que convierte las palabras pronunciadas por el usuario en texto dentro de un documento.</p>
-<h4>Aplicación práctica en el Derecho</h4>
-<ul>
-<li>Permite dictar borradores de demandas y solicitudes.</li>
-<li>Facilita la redacción a abogados y estudiantes con dificultades motoras.</li>
-<li>Reduce la necesidad de utilizar constantemente el teclado.</li>
-</ul>
-<h4>Requerimientos y costo</h4>
-<ul>
-<li>Computadora o laptop compatible.</li>
-<li>Navegador compatible, preferentemente Chrome.</li>
-<li>Micrófono e internet.</li>
-<li>Costo: gratuito en el uso básico.</li>
-</ul>
+<div class="emoji">🎙️</div>
+<span class="pill">Dictado por voz</span>
+<h3>5. Google Docs – Escritura por voz</h3>
+<p><b>Desarrollador:</b> Google.</p>
+<p><b>Web oficial:</b> <a href="https://docs.google.com/" target="_blank">Google Docs</a>.</p>
+<h4>Aplicación en el ámbito jurídico</h4>
+<p>Convierte el habla en texto dentro de un documento. Puede apoyar a abogados, estudiantes o usuarios con movilidad reducida o dificultades para escribir al elaborar borradores, notas y documentos. Es necesario revisar nombres, fechas y términos jurídicos.</p>
+<h4>Requisitos y costo</h4>
+<ul><li>Computadora, micrófono y navegador compatible.</li><li>Cuenta de Google y conexión a internet.</li><li>Función disponible sin costo adicional en Google Docs para cuentas compatibles.</li></ul>
 <h4>Demostración visual</h4>
-<div class="visual"><span>🎤 ✍️</span><strong>Escritura por voz</strong>Las palabras pronunciadas se convierten en texto automáticamente.</div>
-<h4>Valoración crítica</h4>
-<p><b>Ventaja:</b> facilita la elaboración de documentos sin utilizar constantemente el teclado.</p>
-<p><b>Limitación:</b> puede cometer errores al reconocer términos jurídicos especializados.</p>
-<p><b>Contexto peruano:</b> puede beneficiar a estudiantes y profesionales del Derecho con discapacidad motora.</p>
+<a class="video" href="https://www.youtube.com/results?search_query=Google+Docs+Voice+Typing+demonstration" target="_blank">▶ Ver video de demostración en YouTube</a>
+<h4>Evaluación crítica</h4>
+<p><b>Ventaja:</b> reduce la necesidad de escribir manualmente y agiliza la elaboración de borradores.</p>
+<p><b>Limitación:</b> puede transcribir incorrectamente palabras, puntuación o vocabulario jurídico; requiere revisar el documento.</p>
 </article>
 
 </div>
 </section>
 
 <section id="comparacion">
-<h2 class="section-title">03. Cuadro comparativo</h2>
-<div class="compare">
+<h2 class="section-title">Comparación general</h2>
+<div style="overflow-x:auto">
 <table>
-<thead><tr><th>Herramienta</th><th>Discapacidad o necesidad</th><th>Frente jurídico</th></tr></thead>
-<tbody>
-<tr><td>NVDA</td><td>Visual</td><td>Acceso ciudadano y ejercicio profesional</td></tr>
-<tr><td>Live Transcribe</td><td>Auditiva</td><td>Audiencias digitales</td></tr>
-<tr><td>Be My Eyes</td><td>Visual</td><td>Acceso ciudadano</td></tr>
-<tr><td>Immersive Reader</td><td>Dificultades de lectura</td><td>Acceso ciudadano y ejercicio profesional</td></tr>
-<tr><td>Google Docs Voice Typing</td><td>Motora</td><td>Ejercicio profesional</td></tr>
-</tbody>
+<tr><th>Herramienta</th><th>Necesidad que apoya</th><th>Aplicación jurídica</th><th>Costo</th></tr>
+<tr><td>NVDA</td><td>Discapacidad visual</td><td>Lectura de portales y documentos accesibles</td><td>Gratuito</td></tr>
+<tr><td>Google Live Transcribe</td><td>Discapacidad auditiva</td><td>Transcripción de conversaciones</td><td>Gratuito</td></tr>
+<tr><td>Be My Eyes</td><td>Discapacidad visual</td><td>Apoyo para identificar documentos y señalización</td><td>Uso básico gratuito</td></tr>
+<tr><td>Immersive Reader</td><td>Dificultades de lectura</td><td>Comprensión de instrucciones y textos jurídicos</td><td>Depende del producto</td></tr>
+<tr><td>Google Docs Voice Typing</td><td>Dificultad para escribir</td><td>Dictado de borradores y notas</td><td>Sin costo adicional en Docs compatible</td></tr>
 </table>
 </div>
+<p class="note">Los requisitos, idiomas y funciones pueden variar según el dispositivo, la región y la versión del servicio. Antes de usar estas herramientas con información legal, se debe proteger la confidencialidad y verificar la exactitud de los resultados.</p>
 </section>
 
-<section>
-<h2 class="section-title">04. Reflexión final</h2>
+<section id="conclusion">
 <div class="final">
-<h3>La inclusión también es justicia</h3>
-<br>
-<p>Las cinco herramientas investigadas demuestran que la tecnología puede contribuir a disminuir las barreras que enfrentan las personas con discapacidad al acceder a la información y participar en actividades relacionadas con el Derecho.</p>
-<br>
-<p>Consideramos que NVDA destaca por su utilidad para facilitar el acceso autónomo a documentos y plataformas jurídicas digitales. Sin embargo, las demás herramientas también cumplen funciones importantes al mejorar la comunicación, la lectura y la elaboración de documentos.</p>
-<br>
-<p>En el contexto peruano, su implementación debe acompañarse de capacitación, acceso a dispositivos, conexión a internet y mejores condiciones de accesibilidad en las instituciones públicas.</p>
-<br>
-<p><b>La inclusión no consiste únicamente en disponer de tecnología, sino en garantizar que todas las personas puedan utilizarla para conocer, ejercer y defender sus derechos en igualdad de condiciones.</b></p>
+<h2>Conclusión</h2>
+<p>Las herramientas de accesibilidad pueden contribuir a que la justicia sea más cercana e inclusiva, porque facilitan la lectura, la comunicación, la orientación y la elaboración de documentos. Sin embargo, la tecnología por sí sola no elimina todas las barreras: las instituciones deben ofrecer información accesible, capacitar a su personal y proteger los datos personales. Incorporar estas soluciones de manera responsable ayuda a promover una participación más autónoma y equitativa de todas las personas en el ámbito jurídico.</p>
 </div>
 </section>
 </main>
-
-<footer>
-<p>INNOVATECH | Catálogo de tecnología de asistencia y accesibilidad</p>
-<p>Innovación • Accesibilidad • Derecho • Inclusión</p>
-</footer>
-
+<footer>INNOVATECH · Catálogo de Herramientas Inclusivas en el Derecho</footer>
 </body>
 </html>
